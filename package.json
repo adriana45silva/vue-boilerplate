@@ -1,0 +1,29 @@
+{
+  "name": "vue-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server --config=webpack.config.js",
+    "build": "NODE_ENV=production webpack"
+  },
+  "author": "Adriana Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "html-webpack-plugin": "^2.30.1",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+    "vue": "^2.5.2",
+    "vue-hot-reload-api": "^2.2.0",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^13.3.0",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.2",
+    "webpack": "^3.8.0",
+    "webpack-dev-server": "^2.9.2"
+  }
+}
