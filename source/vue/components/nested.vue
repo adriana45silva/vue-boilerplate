@@ -10,7 +10,6 @@
 <script>
   export default {
     name: 'nested-component',
-    // props: ['testingProps'],
     props: {
       testingProps: {
         type: Array

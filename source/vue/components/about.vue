@@ -1,25 +1,33 @@
 <template>
   <div class="about">
     <h1>About Component</h1>
-    <Nested :testingProps="testingProps"></Nested>
+    <component :testingProps.sync="testingProps" v-bind:is="component"></component>
+
+    <button v-on:click="asyncMutation">Click to remove one prop</button>
+    <button v-on:click="addToTestingProps">Click to add one prop</button>
   </div>
 </template>
 
 <script>
   import Nested from 'vuesrc/components/nested';
+  import {mapGetters} from 'vuex';
+  import {mapActions} from 'vuex';
   export default {
     name: 'About',
-    components: {
-      'Nested': Nested
-    },
     data () {
       return {
-        testingProps: [
-          'This is the testing prop #1',
-          'This is the testing prop #2',
-          'This is the testing prop #3'
-        ]
+        component: Nested
       }
-    } 
+    },
+    computed: {
+      ...mapGetters([
+       'testingProps'
+      ]),
+    },
+    methods: {     
+      ...mapActions([
+        'asyncMutation', 'addToTestingProps'
+      ]),    
+    }     
   }
 </script>

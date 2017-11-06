@@ -10,7 +10,12 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  computed: {
+    test: function (){
+      console.log(this.$store)
+    }
+  }
 }
 </script>
 
@@ -19,15 +24,13 @@ export default {
   h1, p, a {
     font-family: 'Arial';
   }
-</style>
 
-<style>
-#vue-app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #vue-app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>

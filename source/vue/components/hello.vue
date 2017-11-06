@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 v-test-dir>{{ msg }}</h1>
   </div>
 </template>
 
@@ -18,6 +18,14 @@
       return {
         msg: 'Welcome to Hello Component'
       }
-    }
+    },
+    directives:{
+      testDir: {
+        //custom directive locally
+        bind(el, binding, vnode){
+          console.log(el);
+        }        
+      }
+    } 
   }
 </script>
